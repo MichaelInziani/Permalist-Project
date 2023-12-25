@@ -14,6 +14,8 @@ const db = new pg.Client({
   port: process.env.Pg_port,
 });
 
+db.connect();
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
